@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Contact - Hypetunez</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- Font Awesome for icons -->
+    <style>
+        .hover-effect:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header class="bg-gray-900 text-white py-4 px-6 flex flex-wrap justify-between items-center">
+        <h1 class="text-lg font-bold">Hypetunez</h1>
+
+       
+
+        <!-- Hamburger Menu for Mobile -->
+        <button id="hamburger-menu" class="sm:hidden text-white text-2xl">
+            &#9776;
+        </button>
+
+        <!-- Navigation -->
+        <nav class="w-full sm:w-auto mt-4 sm:mt-0 sm:flex sm:space-x-6 hidden sm:block" id="nav-links">
+            <ul class="flex flex-col sm:flex-row sm:space-x-6 sm:space-y-0 space-y-4 text-sm">
+                <li><a href="index.html" class="hover:text-gray-400 py-2">Home</a></li>
+                <li><a href="#trending" class="hover:text-gray-400 py-2">Trending Songs</a></li>
+                <li><a href="#submit" class="hover:text-gray-400 py-2">Submit Songs</a></li>
+              
+                <li><a href="#services" class="hover:text-gray-400 py-2">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="flex flex-grow w-full px-4 py-6 flex-col lg:flex-row">
+
+        <!-- Contact Details Section -->
+        <div class="w-full lg:w-1/2 p-6 bg-white rounded-lg shadow-lg mx-auto my-8">
+
+            <!-- Contact Heading -->
+            <h2 class="text-2xl font-bold mb-6 text-center">Contact Us</h2>
+
+            <!-- Contact Info -->
+            <div class="space-y-6">
+                <!-- WhatsApp -->
+                <div class="flex items-center space-x-4 hover-effect">
+                    <i class="fab fa-whatsapp text-3xl text-green-500"></i>
+                    <a href="https://wa.me/+2206826562" target="_blank" class="text-lg text-gray-800 hover:text-gray-600">
+                        <span>Contact via WhatsApp: +2206826562</span>
+                    </a>
+                </div>
+
+                <!-- Opening Hours -->
+                <div class="flex items-center space-x-4 hover-effect">
+                    <i class="fas fa-clock text-3xl text-yellow-500"></i>
+                    <p class="text-lg text-gray-800">Opening Hours: 24hrs - Mondays to Saturdays</p>
+                </div>
+
+                <!-- Location -->
+                <div class="flex items-center space-x-4 hover-effect">
+                    <i class="fas fa-map-marker-alt text-3xl text-red-500"></i>
+                    <p class="text-lg text-gray-800">Location: Manjai, The Gambia, West Africa</p>
+                </div>
+
+                <!-- Email -->
+                <div class="flex items-center space-x-4 hover-effect">
+                    <i class="fas fa-envelope text-3xl text-blue-500"></i>
+                    <a href="mailto:inforhypetunez@gmail.com" class="text-lg text-gray-800 hover:text-gray-600">
+                        <span>Email: inforhypetunez@gmail.com</span>
+                    </a>
+                </div>
+
+                <!-- Additional Info (Add Your Own) -->
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-4 hover-effect">
+                        <i class="fas fa-phone-alt text-3xl text-purple-500"></i>
+                        <p class="text-lg text-gray-800">Phone: <span class="text-gray-600">+2206826562</span></p>
+                    </div>
+
+                    <div class="flex items-center space-x-4 hover-effect">
+                        <i class="fas fa-globe text-3xl text-teal-500"></i>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white text-center py-3 mt-auto">
+        Hypetunez 2025 Rights Reserved
+    </footer>
+
+    <script>
+        // Toggle navigation on small screens (Hamburger Menu)
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburgerMenu.addEventListener('click', function() {
+            navLinks.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Hypetunez</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hover-effect:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .song-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+        .song-image {
+            max-height: 350px; /* Set max height for image */
+            object-fit: cover;
+        }
+        .song-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 455px; /* Fixed height for each container */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header class="bg-gray-900 text-white py-4 px-6 flex flex-wrap justify-between items-center">
+        <h1 class="text-lg font-bold">Hypetunez</h1>
+
+        <!-- Search Bar -->
+        <input type="text" id="search" placeholder="Search songs..." class="px-4 py-2 rounded bg-gray-800 text-white outline-none w-full sm:w-auto mt-2 sm:mt-0">
+
+        <!-- Hamburger Menu for Mobile -->
+        <button id="hamburger-menu" class="sm:hidden text-white text-2xl">
+            &#9776;
+        </button>
+
+        <!-- Navigation -->
+        <nav class="w-full sm:w-auto mt-4 sm:mt-0 sm:flex sm:space-x-6 hidden sm:block" id="nav-links">
+            <ul class="flex flex-col sm:flex-row sm:space-x-6 sm:space-y-0 space-y-4 text-sm">
+                <li><a href="gambianmusic.html" class="hover:text-gray-400 py-2">Gambian Music</a></li>
+                <li><a href="submit.html" class="hover:text-gray-400 py-2">Submit Songs</a></li>
+                <li><a href="contact.html" class="hover:text-gray-400 py-2">Contact</a></li>
+                <li><a href="#services" class="hover:text-gray-400 py-2">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="flex flex-grow w-full px-4 py-6 flex-col lg:flex-row">
+        <!-- Articles Section -->
+        <div class="w-full lg:w-1/4 p-4 mb-6 lg:mb-0">
+            <h2 class="text-lg font-bold mb-4">Latest Articles</h2>
+            <div class="bg-white p-4 rounded-lg shadow mb-4 hover-effect flex">
+                <img src="myk.jpg" alt="Article Image" class="w-20 h-20 object-cover mr-4 rounded">
+                <div>
+                    <h3 class="font-bold">What's Trending</h3>
+                    <p class="text-sm text-gray-600">Myk Jayda just dropped his latest track, The Father, and it’s already causing a buzz! The song blends smooth beats with deep lyrics, 
+                        showcasing his unique style and talent. Fans are loving the fresh sound, and it's quickly becoming a must-listen.
+                         <a href="http://127.0.0.1:5500/Myk%20Jayda-The%20Father%20Hypetunez.com.MP3" class="text-blue-500 hover:underline">Download The Father</a>
+                    </p>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow mb-4 hover-effect flex">
+                <img src="darko.jpeg" alt="Article Image" class="w-20 h-20 object-cover mr-4 rounded">
+                <div>
+                    <h3 class="font-bold">Want To Send Your songs for Upload?</h3>
+                    <p class="text-sm text-gray-600">Are you an artist with new music? We’d love to feature your song on Hypetunez! 
+                        If you're ready to share your latest track, simply <a href="submit.html" class="text-blue-500 hover:underline">submit your song here</a>. Get in touch now!</p>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow hover-effect flex">
+                <img src="advert.jpeg" alt="Article Image" class="w-20 h-20 object-cover mr-4 rounded">
+                <div>
+                    <h3 class="font-bold">WELCOME TO HYPETUNEZ</h3>
+                    <p class="text-sm text-gray-600">Welcome to Hypetunez! 🎶
+                        Welcome to Hypetunez! 🎶
+                        Hypetunez is your go-to platform for the hottest Gambian and Nigerian tracks. Download your favorite songs easily and vibe to the best beats, anytime, anywhere. Let the music take over! 🔥🎧
+                        
+                        </p>
+                </div>
+            </div>
+        </div> 
+
+        <!-- Songs List -->
+        <main class="flex-grow grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-4" id="song-list">
+            <!-- Song Item 1 -->
+            <div class="bg-white p-4 rounded-lg shadow-lg text-center hover-effect max-w-xs mx-auto song-item">
+                <div class="song-container">
+                    <img src="whylove.jpg" alt="Song Cover" class="rounded mb-2 w-full song-image">
+                    <p class="font-bold">Asake - Why Love</p>
+                    <a href="Asake_Why Love Hypetunez.com.MP3" download>
+                        <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 mt-2">
+                            Download
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Song Item 2 -->
+            <div class="bg-white p-4 rounded-lg shadow-lg text-center hover-effect max-w-xs mx-auto song-item">
+                <div class="song-container">
+                    <img src="rema.jpg" alt="Song Cover" class="rounded mb-2 w-full song-image">
+                    <p class="font-bold">Rema - Baby (Is it a Crime)</p>
+                    <a href="Rema - Baby(is it a crime).MP3" download>
+                        <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 mt-2">
+                            Download
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Song Item 3 -->
+            <div class="bg-white p-4 rounded-lg shadow-lg text-center hover-effect max-w-xs mx-auto song-item">
+                <div class="song-container">
+                    <img src="onlyfans.jpg" alt="Song Cover" class="rounded mb-2 w-full song-image">
+                    <p class="font-bold">Young Jonn - Only Fans</p>
+                    <a href="Young Jonn - Only Fans.MP3" download>
+                        <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 mt-2">
+                            Download
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+             <!-- Song Item 4 -->
+             <div class="bg-white p-4 rounded-lg shadow-lg text-center hover-effect max-w-xs mx-auto song-item">
+                <div class="song-container">
+                    <img src="teni.jpg" alt="Song Cover" class="rounded mb-2 w-full song-image">
+                    <p class="font-bold">Teni - Money</p>
+                    <a href="Teni-Money.MP3" download>
+                        <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 mt-2">
+                            Download
+                        </button>
+                    </a>
+                </div>
+            </div>
+  <!-- Song Item 5 -->
+  <div class="bg-white p-4 rounded-lg shadow-lg text-center hover-effect max-w-xs mx-auto song-item">
+    <div class="song-container">
+        <img src="tems.jpg" alt="Song Cover" class="rounded mb-2 w-full song-image">
+        <p class="font-bold">Tems - Get it Right ft Asake</p>
+        <a href="Tems - Get it Right ft Asake.MP3" download>
+            <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 mt-2">
+                Download
+            </button>
+        </a>
+    </div>
+</div>
+
+ <!-- Song Item 5 -->
+ <div class="bg-white p-4 rounded-lg shadow-lg text-center hover-effect max-w-xs mx-auto song-item">
+    <div class="song-container">
+        <img src="jobis.jpg" alt="Song Cover" class="rounded mb-2 w-full song-image">
+        <p class="font-bold">Miss Jobiz - NFELLEH JANG</p>
+        <a href="Miss Jobiz - NFELLEH JANG.MP3" download>
+            <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 mt-2">
+                Download
+            </button>
+        </a>
+    </div>
+</div>
+             <!-- Song Item 1 -->
+             <div class="bg-white p-4 rounded-lg shadow-lg text-center hover-effect max-w-xs mx-auto song-item">
+                <div class="song-container">
+                    <img src="Stargirl.jpg" alt="Song Cover" class="rounded mb-2 w-full song-image">
+                    <p class="font-bold">Star Girl - ALHAGIE</p>
+                    <a href="Star Girl-ALHAGIE.MP3" download>
+                        <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 mt-2">
+                            Download
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Song Item 2 -->
+            <div class="bg-white p-4 rounded-lg shadow-lg text-center hover-effect max-w-xs mx-auto song-item">
+                <div class="song-container">
+                    <img src="st.jpg" alt="Song Cover" class="rounded mb-2 w-full song-image">
+                    <p class="font-bold">St Da Gambian Dream - NNA LA DUWA</p>
+                    <a href="St Gambian Dream - NNA LA DUWA.MP3" download>
+                        <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 mt-2">
+                            Download
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Song Item 3 -->
+            <div class="bg-white p-4 rounded-lg shadow-lg text-center hover-effect max-w-xs mx-auto song-item">
+                <div class="song-container">
+                    <img src="awa.jpg" alt="Song Cover" class="rounded mb-2 w-full song-image">
+                    <p class="font-bold">Awa Gambia - JAMA NEKHNA</p>
+                    <a href="Awa Gambia-JAMA NEKHNA .MP3" download>
+                        <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 mt-2">
+                            Download
+                        </button>
+                    </a>
+                </div>
+            </div>
+  <!-- Song Item 3 -->
+  <div class="bg-white p-4 rounded-lg shadow-lg text-center hover-effect max-w-xs mx-auto song-item">
+    <div class="song-container">
+        <img src="myk.jpg" alt="Song Cover" class="rounded mb-2 w-full song-image">
+        <p class="font-bold">Myk Jayda - The Father</p>
+        <a href="Myk Jayda-The Father Hypetunez.com.MP3" download>
+            <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 mt-2">
+                Download
+            </button>
+        </a>
+    </div>
+</div>
+             <!-- Song Item 4 -->
+             <div class="bg-white p-4 rounded-lg shadow-lg text-center hover-effect max-w-xs mx-auto song-item">
+                <div class="song-container">
+                    <img src="getrich.jpg" alt="Song Cover" class="rounded mb-2 w-full song-image">
+                    <p class="font-bold">Jizzle - Wanna Get Rich(Remix) ft Various Artists</p>
+                    <a href="Jizzle - Wanna Get Rich(Remix) ft Various Artists.MP3" download>
+                        <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 mt-2">
+                            Download
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+                         <!-- Song Item 5 -->
+                         <div class="bg-white p-4 rounded-lg shadow-lg text-center hover-effect max-w-xs mx-auto song-item">
+                            <div class="song-container">
+                                <img src="uche.jpg" alt="Song Cover" class="rounded mb-2 w-full song-image">
+                                <p class="font-bold">Uche - No Ham Lolu(Kaa)</p>
+                                <a href="Uche - No Ham Lolu(Kaa).MP3" download>
+                                    <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 mt-2">
+                                        Download
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+
+        <!-- Song Item 6 -->
+             <div class="bg-white p-4 rounded-lg shadow-lg text-center hover-effect max-w-xs mx-auto song-item">
+                <div class="song-container">
+                    <img src="avengers.jpg" alt="Song Cover" class="rounded mb-2 w-full song-image">
+                    <p class="font-bold">Hussain - Avengers ft Various Artists</p>
+                    <a href="Hussain Dada ft Various Artists.MP3" download>
+                        <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 mt-2">
+                            Download
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Song Item 7 -->
+             <div class="bg-white p-4 rounded-lg shadow-lg text-center hover-effect max-w-xs mx-auto song-item">
+                <div class="song-container">
+                    <img src="manue.jpg" alt="Song Cover" class="rounded mb-2 w-full song-image">
+                    <p class="font-bold">Manue - Pour Me Water</p>
+                    <a href="Manue- Pour Me Water.MP3" download>
+                        <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 mt-2">
+                            Download
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Song Item 8 -->
+            <div class="bg-white p-4 rounded-lg shadow-lg text-center hover-effect max-w-xs mx-auto song-item">
+                <div class="song-container">
+                    <img src="tisha.jpg" alt="Song Cover" class="rounded mb-2 w-full song-image">
+                    <p class="font-bold">Tisha-Soft Kiss ft Molze</p>
+                    <a href="Tisha ft Molze - SOFT KISS (JSI MUSIC).MP3" download>
+                        <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 mt-2">
+                            Download
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white text-center py-3 mt-auto">
+        Hypetunez 2025 Rights Reserved
+    </footer>
+
+    <script>
+        // Toggle navigation on small screens (Hamburger Menu)
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburgerMenu.addEventListener('click', function() {
+            navLinks.classList.toggle('hidden');
+        });
+
+        // Search functionality (same as before)
+        document.getElementById('search').addEventListener('input', function() {
+            let filter = this.value.toLowerCase();
+            let songList = document.getElementById('song-list');
+            let songs = songList.getElementsByTagName('div');
+
+            for (let i = 0; i < songs.length; i++) {
+                let songTitle = songs[i].getElementsByTagName('p')[0].textContent.toLowerCase();
+                if (songTitle.includes(filter)) {
+                    songs[i].style.display = "block";
+                } else {
+                    songs[i].style.display = "none";
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

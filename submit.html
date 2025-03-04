@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Submit Songs - Hypetunez</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hover-effect:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header class="bg-gray-900 text-white py-4 px-6 flex flex-wrap justify-between items-center">
+        <h1 class="text-lg font-bold">Hypetunez</h1>
+
+        
+
+        <!-- Hamburger Menu for Mobile -->
+        <button id="hamburger-menu" class="sm:hidden text-white text-2xl">
+            &#9776;
+        </button>
+
+        <!-- Navigation -->
+        <nav class="w-full sm:w-auto mt-4 sm:mt-0 sm:flex sm:space-x-6 hidden sm:block" id="nav-links">
+            <ul class="flex flex-col sm:flex-row sm:space-x-6 sm:space-y-0 space-y-4 text-sm">
+                <li><a href="index.html" class="hover:text-gray-400 py-2">Home</a></li>
+                <li><a href="gambianmusic.html" class="hover:text-gray-400 py-2">Gambian Music</a></li>
+                <li><a href="contact.html" class="hover:text-gray-400 py-2">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="flex flex-grow w-full px-4 py-6 flex-col lg:flex-row">
+        <!-- Submit Instructions Section -->
+        <div class="w-full lg:w-1/2 p-6 bg-white rounded-lg shadow-lg mx-auto my-8">
+            <h2 class="text-2xl font-bold mb-4 text-center">How to Submit Your Song</h2>
+            <p class="text-lg text-gray-700 mb-4">Follow these simple steps to submit your song to Hypetunez:</p>
+            <ol class="list-decimal list-inside text-lg text-gray-700 mb-6">
+                <li>Ensure your song is in MP3 format.</li>
+                <li>Provide the title of your song and a brief description.</li>
+                <Li>Send in your cover photo/flyer of the song</Li>
+                <li>Click the WhatsApp button below to send your song and details directly to our team.</li>
+            </ol>
+            
+            <!-- WhatsApp Button -->
+            <a href="https://wa.me/+2206826562" target="_blank">
+                <button class="bg-green-500 text-white px-6 py-3 rounded-full hover:bg-green-600 transition duration-300 w-full">
+                    Submit via WhatsApp
+                </button>
+            </a>
+            <br>
+            <br>
+            <p>Kindly feel free to send feedbacks or request for songs you want on the site!</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white text-center py-3 mt-auto">
+        Hypetunez 2025 Rights Reserved
+    </footer>
+
+    <script>
+        // Toggle navigation on small screens (Hamburger Menu)
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburgerMenu.addEventListener('click', function() {
+            navLinks.classList.toggle('hidden');
+        });
+
+        // Search functionality (same as before)
+        document.getElementById('search').addEventListener('input', function() {
+            let filter = this.value.toLowerCase();
+            let songList = document.getElementById('song-list');
+            let songs = songList.getElementsByTagName('div');
+
+            for (let i = 0; i < songs.length; i++) {
+                let songTitle = songs[i].getElementsByTagName('p')[0].textContent.toLowerCase();
+                if (songTitle.includes(filter)) {
+                    songs[i].style.display = "block";
+                } else {
+                    songs[i].style.display = "none";
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
